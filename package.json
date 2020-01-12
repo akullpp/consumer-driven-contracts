@@ -5,14 +5,24 @@
     "test": "ava"
   },
   "dependencies": {
-    "@hapi/joi": "^15.1.0",
-    "ava": "^1.4.1",
-    "axios": "^0.18.0",
-    "dotenv": "^8.0.0",
-    "faker": "^4.1.0"
+    "@hapi/joi": "17.0.2",
+    "ava": "2.4.0",
+    "axios": "0.19.1",
+    "dotenv": "8.2.0",
+    "esm": "3.2.25",
+    "faker": "4.1.0"
   },
   "devDependencies": {
-    "prettier": "^1.18.2"
+    "prettier": "1.19.1"
+  },
+  "ava": {
+    "require": [
+      "esm"
+    ],
+    "files": [
+      "test/**/*",
+      "!test/helpers/**/*"
+    ]
   },
   "prettier": {
     "semi": false,

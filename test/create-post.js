@@ -16,5 +16,5 @@ test('Create post', async t => {
   const { data: response } = await axios.post(url, request)
   console.log(`Received response:\n${JSON.stringify(response, null, 2)}\n\n`)
 
-  await t.notThrowsAsync(schema.validate(response))
+  t.falsy(schema.validate(response).error)
 })
